@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="39c6fec6-84aa-482b-86e1-c55c98ea8e39">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="7"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     usermaster.`User_ID` AS usermaster_User_ID,
+     usermaster.`UserName` AS usermaster_UserName,
+     useractivitymaster.`Login_Time` AS useractivitymaster_Login_Time,
+     useractivitymaster.`Logout_Time` AS useractivitymaster_Logout_Time
+FROM
+     `usermaster` usermaster INNER JOIN `useractivitymaster` useractivitymaster ON usermaster.`User_ID` = useractivitymaster.`User_ID`]]>
+	</queryString>
+	<field name="usermaster_User_ID" class="java.lang.Integer"/>
+	<field name="usermaster_UserName" class="java.lang.String"/>
+	<field name="useractivitymaster_Login_Time" class="java.sql.Timestamp"/>
+	<field name="useractivitymaster_Logout_Time" class="java.sql.Timestamp"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="c649c3e3-a8df-4aff-a0ae-615937c01d52"/>
+				<staticText>
+					<reportElement x="20" y="20" width="287" height="43" forecolor="#FFFFFF" uuid="fd3e5bc1-3bfd-4dd1-9688-af4464b02902"/>
+					<textElement>
+						<font size="26" isBold="true"/>
+					</textElement>
+					<text><![CDATA[User Activity Report]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="5e94f568-bc91-47d0-9dbb-fa9c84faeb18"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Details of user activity]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="55480f32-fcc5-4173-a911-332a93669539"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="100" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="11fcc894-f302-4b94-811b-4611e21b9d0e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[User_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="100" y="0" width="123" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="672c0324-f1d8-4072-9023-607c792d5fad"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Username]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="223" y="0" width="162" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b5f4abd7-7065-4e5e-991b-2d96e7ca92c4"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Login_Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="385" y="0" width="168" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="1c026deb-7420-4da2-99e3-3d99951d1b36"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Logout_Time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="51cb2f5b-92b3-4959-baae-dc826b49254e"/>
+			</line>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="100" height="20" uuid="5c073c26-661d-4267-a011-64cca637b75a"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{usermaster_User_ID}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="yyyy/MM/dd HH:mm:ss" isBlankWhenNull="true">
+				<reportElement x="223" y="0" width="162" height="20" uuid="3b08a589-7e5b-4306-a087-be8248efeeaa"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{useractivitymaster_Login_Time}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="yyyy/MM/dd HH:mm:ss" isBlankWhenNull="true">
+				<reportElement x="395" y="0" width="158" height="20" uuid="c4566cf0-6ec8-49e9-8869-27e44260f464"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{useractivitymaster_Logout_Time}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="100" y="0" width="123" height="20" uuid="4e32f4f7-12b2-4f47-a0b6-7857e1131a0d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{usermaster_UserName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="20064190-0229-4414-97f9-cc5547c4b0bd"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Developed By :- Aptecians.                               Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="01fd4858-70ab-40f3-a7d1-c48c001e1a94"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="e1d39e68-d04b-491c-833c-99be6e836802"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8fb3541f-6611-438d-b8de-34375ca1c19d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     clientprofessional.`Client_ID` AS clientprofessional_Client_ID,
+     clientprofessional.`Profession` AS clientprofessional_Profession,
+     clientprofessional.`Designation` AS clientprofessional_Designation,
+     clientprofessional.`Office_Phone` AS clientprofessional_Office_Phone,
+     clientprofessional.`Office_Address` AS clientprofessional_Office_Address,
+     clientprofessional.`Annual_Income` AS clientprofessional_Annual_Income,
+     clientprofessional.`Income_Other` AS clientprofessional_Income_Other
+FROM
+     `clientprofessional` clientprofessional]]>
+	</queryString>
+	<field name="clientprofessional_Client_ID" class="java.lang.Integer"/>
+	<field name="clientprofessional_Profession" class="java.lang.String"/>
+	<field name="clientprofessional_Designation" class="java.lang.String"/>
+	<field name="clientprofessional_Office_Phone" class="java.lang.String"/>
+	<field name="clientprofessional_Office_Address" class="java.lang.String"/>
+	<field name="clientprofessional_Annual_Income" class="java.lang.Double"/>
+	<field name="clientprofessional_Income_Other" class="java.lang.Double"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="0804835b-675e-4c6f-89d9-c416b582b200"/>
+				<staticText>
+					<reportElement x="20" y="20" width="328" height="43" forecolor="#FFFFFF" uuid="a9a645a1-60d0-4f69-b45a-77bf1054fdbe"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Client Professional Report]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="30e3d873-c79c-4def-b57f-eb565815b02c"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Client Professional Details]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="9543ad1f-e2ca-43fd-abb1-118c4e4f428d"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="55" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="9d39c796-2a11-4e3a-8a9e-2baccd6ecadf"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Client ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="55" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="8d699db3-6950-4af9-8e9a-8903cb4d0980"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Profession]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="133" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="a3794933-ee67-4ac5-ae0c-c217b8affc08"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Designation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="212" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="fe3d9568-a242-4869-9b47-399d77c13551"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Phone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="290" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="60093ff5-9a73-46d6-a472-d9b07e9ac50e"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="368" y="0" width="99" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="54771824-4906-441c-a641-f87d0e0f4a63"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Annual Income]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="467" y="0" width="88" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="ea327e02-8ed6-4157-b839-45c46ccede9e"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Other Income]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="bb3412f3-ede9-4df8-a0e5-9ec78f506110"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="43" height="20" uuid="772e1524-5ed3-4d96-870d-d0caf4ddf5d3"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientprofessional_Client_ID}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="55" y="0" width="79" height="20" uuid="e91cb534-5144-445f-a86e-076cfbdc929d"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientprofessional_Profession}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="134" y="0" width="78" height="20" uuid="b4469906-16e0-4cf0-9ff6-22a008e989e2"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientprofessional_Designation}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="212" y="0" width="79" height="20" uuid="3d22eaf6-bc9c-41ac-9e89-1227a3ecca5c"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientprofessional_Office_Phone}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="291" y="0" width="104" height="20" uuid="f5c9bc77-58d2-41ec-930d-b1b277012be3"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientprofessional_Office_Address}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="395" y="0" width="79" height="20" uuid="2ce02d4c-67b6-47b7-9dc6-53e215126178"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientprofessional_Annual_Income}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="474" y="0" width="81" height="20" uuid="8d5e921a-e41a-425f-9e4e-48c7bff726d1"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientprofessional_Income_Other}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="399740dc-a60a-483e-bd8d-23ac9e126b78"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Developed By :- Aptecians.                              Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="6b281c96-ea44-4bd9-9310-e324ad1b6bcf"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="3374d06d-b7dc-4b8d-b2ae-84cbc2753d3a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
